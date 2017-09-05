@@ -17,7 +17,7 @@ public class EchoDialog : IDialog<object>
     
     public EchoDialog(string name)
     {
-        this.userName= name;
+        this.userName = name;
         
     }
     
