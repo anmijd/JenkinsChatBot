@@ -121,7 +121,7 @@ public class EchoDialog : IDialog<object>
                 var resultString ="";
                 foreach(var key in dicOfStrings.Keys)
                 {
-                   resultString= resultString + " \n" +($"{key} {dicOfStrings[key]}");
+                   resultString= resultString + " \n " +($"{key} {dicOfStrings[key]}");
                 }
         return resultString;
     }
