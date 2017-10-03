@@ -63,9 +63,8 @@ public class EchoDialog : IDialog<object>
         }
         else if (message.Text.Contains("time"))
         {
-            //Set the time zone information to US Mountain Standard Time 
+            
             var timeZoneInfo = TimeZoneInfo.FindSystemTimeZoneById("W. Europe Standard Time"); 
-            //Get date and time in US Mountain Standard Time 
             var dateTime = TimeZoneInfo.ConvertTime(DateTime.Now, timeZoneInfo);
             await context.PostAsync($"It´s {dateTime.ToString("HH:mm")} ");
             context.Wait(MessageReceivedAsync);
@@ -85,7 +84,7 @@ public class EchoDialog : IDialog<object>
 
     public string ScrapeFood()
     {
-        var date = DateTime.Today.AddDays(-(int)DateTime.Today.DayOfWeek + (int)DayOfWeek.Monday);
+        var date = DateTime.Today //.AddDays(-(int)DateTime.Today.DayOfWeek + (int)DayOfWeek.Monday);
         if (!dicOfStrings.Keys.Any(k => k.Contains(date.Day.ToString())))
         {
             //log.Info($"Fetching new data");
