@@ -84,7 +84,7 @@ public class EchoDialog : IDialog<object>
 
     public string ScrapeFood()
     {
-        var date = DateTime.Today //.AddDays(-(int)DateTime.Today.DayOfWeek + (int)DayOfWeek.Monday);
+        var date = DateTime.Today; //.AddDays(-(int)DateTime.Today.DayOfWeek + (int)DayOfWeek.Monday);
         if (!dicOfStrings.Keys.Any(k => k.Contains(date.Day.ToString())))
         {
             //log.Info($"Fetching new data");
